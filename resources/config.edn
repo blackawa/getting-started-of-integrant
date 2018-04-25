@@ -1,2 +1,5 @@
-{:gsig.component/http {:port 8080 :handler #ig/ref :gsig.handler.greet/index}
+{:gsig.component/http {:port 8080 :endpoint #ig/ref :gsig.component/endpoint}
+ :gsig.component/endpoint
+ {:gsig.handler.greet/index #ig/ref :gsig.handler.greet/index}
+ ;; handlers
  :gsig.handler.greet/index {:name "Alice"}}
