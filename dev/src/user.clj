@@ -1,5 +1,6 @@
 (ns user
-  (:require [integrant.core :as ig]
+  (:require [alembic.still :refer [load-project]]
+            [integrant.core :as ig]
             [integrant.repl :refer [clear go halt prep init reset]]
             [gsig.main]))
 
