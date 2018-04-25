@@ -1,4 +1,5 @@
 (ns gsig.main
+  (:gen-class)
   (:require [integrant.core :as ig]
             [ring.adapter.jetty :as jetty]
             [ring.util.response :as res]))
@@ -11,3 +12,6 @@
 
 (defmethod ig/init-key :handler/greet [_ {:keys [name]}]
   (fn [_] (res/response (str "Hello " name))))
+
+(defn -main [& args]
+  (ig/init (ig/read-string (slurp (clojure.java.io/resource "config.edn")))))

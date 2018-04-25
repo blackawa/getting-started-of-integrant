@@ -2,5 +2,6 @@
   :dependencies [[integrant "0.6.3"]
                  [ring "1.6.3"]
                  [rum "0.11.2"]]
+  :main gsig.main
   :profiles {:dev {:dependencies [[integrant/repl "0.3.1"]]
                    :source-paths ["dev/src"]}})
