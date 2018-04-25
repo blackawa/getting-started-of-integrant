@@ -1,2 +1,2 @@
-{:adapter/jetty {:port 8080 :handler #ig/ref :handler/greet}
- :handler/greet {:name "Alice"}}
+{:gsig.component/http {:port 8080 :handler #ig/ref :gsig.handler.greet/index}
+ :gsig.handler.greet/index {:name "Alice"}}
